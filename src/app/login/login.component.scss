@@ -17,12 +17,57 @@
 }
 
 .description {
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
     top: 200px;
     right: 60px;
     text-align: right;
     font-style: oblique;
+}
 
+.login-form {
+    width: 350px;
+
+    border-radius: 10px;
+    position: absolute;
+    bottom: 100px;
+    right: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+input {
+    background-color: black;
+    border-radius: 15px;
+    color: beige;
+}
+
+.error {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: red;
+}
+
+@media (max-width: 900px) {
+    /* Regole CSS da applicare */
+
+    .logo {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        position: absolute;
+        top: 60px;
+        right: 60px;
+    }
+
+    .description {
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: absolute;
+        top: 200px;
+        right: 60px;
+        text-align: right;
+        font-style: oblique;
+    }
 }
