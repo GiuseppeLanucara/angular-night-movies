@@ -29,6 +29,53 @@
                 </div>
             </div>
         </div>
+        <div class="theatre-movies">
+            <div class="top">
+                <h3 class="mt-4">Populars OnDemand</h3>
+                <div class="view-all">View All</div>
+            </div>
+            <div class="movies-thumbnail">
+                <div class="movie" *ngFor="let movie of theatreMovies">
+                    <div class=" cover">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name mt-2">{{movie.name}}</div>
+                        <div class="rating">
+                            <ng-template #t let-fill="fill">
+                                <span class="star" [class.full]="fill===100">
+                                    <span class="half" [style.width.%]="fill">&hearts;</span>
+                                    &hearts;
+                                </span>
+                            </ng-template>
+
+                            <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true"
+                                [max]="5"></ngb-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="populars"></div>
+    <div class="populars">
+        <h4 class="mt-3 ms-3">Best Of All Time</h4>
+        <div class="movies">
+            <div class="movie mt-3 ms-3 pstxt" *ngFor="let movie of popularMovies">
+
+                <div class="details">
+                    <div class="name mt-2">{{movie.name}}</div>
+                    <div class="rating">
+                        <ng-template #t let-fill="fill">
+                            <span class="star" [class.full]="fill===100">
+                                <span class="half" [style.width.%]="fill">&hearts;</span>
+                                &hearts;
+                            </span>
+                        </ng-template>
+
+                        <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
