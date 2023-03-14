@@ -6,4 +6,12 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   constructor() { }
+
+  login(username: string, password: string) {
+    if (username === 'Giuseppe' && password === '123456789') {
+      return 200;
+    } else {
+      return 403;
+    }
+  }
 }
