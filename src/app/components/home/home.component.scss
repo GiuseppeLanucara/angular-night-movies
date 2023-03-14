@@ -1,0 +1,38 @@
+.home-container {
+    display: flex;
+
+    .all-movies {
+        width: 75%;
+        min-height: calc(100vh - 80px);
+        border-right: 2px solid blue;
+        padding: 20px 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 6px solid blue;
+                padding-left: 5px;
+            }
+
+            .view-all {
+                color: blue;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .populars {
+        width: 25%;
+        min-height: calc(100vh - 80px);
+        padding: 20px 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    }
+}

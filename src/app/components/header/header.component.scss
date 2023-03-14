@@ -33,4 +33,37 @@
             cursor: pointer;
         }
     }
+
+
+
+
+    @media screen and (max-width: 768px) {
+        .logout {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-style: oblique;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 2s;
+                cursor: pointer;
+            }
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-left: 15px;
+            font-style: italic;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 2s;
+                cursor: pointer;
+            }
+        }
+
+    }
 }
