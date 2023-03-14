@@ -1,4 +1,5 @@
 <app-header></app-header>
+
 <div class="home-container">
     <div class="all-movies">
         <div class="trending-movies">
@@ -12,7 +13,7 @@
                         <img [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
-                        <div class="name">{{movie.name}}</div>
+                        <div class="name mt-2">{{movie.name}}</div>
                         <div class="rating">
                             <ng-template #t let-fill="fill">
                                 <span class="star" [class.full]="fill===100">
