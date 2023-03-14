@@ -16,6 +16,8 @@ export class LoginComponent {
       this.errorMsg = "Username required";
     } else if (this.password.trim().length === 0) {
       this.errorMsg = "Password required";
+    } else {
+      this.errorMsg = "";
     }
   }
 }
