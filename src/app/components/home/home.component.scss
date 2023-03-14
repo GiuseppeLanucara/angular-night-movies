@@ -72,6 +72,22 @@
         }
     }
 
+}
 
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    color: lightblue;
+}
 
+.full {
+    color: red;
+}
+
+.half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: red;
 }
