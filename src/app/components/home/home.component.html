@@ -26,7 +26,7 @@
             </div>
             <div class="movies-thumbnail">
                 <div class="movie" *ngFor="let movie of trendingMovies">
-                    <div class=" cover">
+                    <div class=" cover" (click)="goToMovie('current',movie.id)">
                         <img class="max" [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
@@ -53,7 +53,7 @@
             </div>
             <div class="movies-thumbnail">
                 <div class="movie" *ngFor="let movie of theatreMovies">
-                    <div class=" cover">
+                    <div class=" cover" (click)="goToMovie('populars',movie.id)">
                         <img class="max" [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
@@ -80,7 +80,7 @@
             <div class="movie mt-3 ms-3 pstxt" *ngFor="let movie of popularMovies">
 
                 <div class="details">
-                    <div class="name mt-2 max2">{{movie.name}}</div>
+                    <div class="name mt-2 max2" (click)="goToMovie('bestOf',movie.id)">{{movie.name}}</div>
                     <div class="rating">
                         <ng-template #t let-fill="fill">
                             <span class="star" [class.full]="fill===100">
