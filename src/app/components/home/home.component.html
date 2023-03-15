@@ -1,16 +1,33 @@
 <app-header></app-header>
 
+<div class="about">
+    <div class="container">
+        <h2 class="title">
+            <span class="title-word title-word-1">What </span>
+            <span class="title-word title-word-2">You </span>
+            <span class="title-word title-word-3">Will </span>
+            <span class="title-word title-word-4">Find</span>
+        </h2>
+    </div>
+    <p>In this platform you will find three sections, that show the current movies to see in the next days, the most
+        popular movies and the top favourite movies
+        of all time.
+    </p>
+</div>
+
 <div class="home-container">
+
+
     <div class="all-movies">
         <div class="trending-movies">
             <div class="top">
                 <h3 class="mt-4">Current Movies</h3>
-                <div class="view-all">View All</div>
+
             </div>
             <div class="movies-thumbnail">
                 <div class="movie" *ngFor="let movie of trendingMovies">
                     <div class=" cover">
-                        <img [src]="movie.cover" alt="">
+                        <img class="max" [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
                         <div class="name mt-2">{{movie.name}}</div>
@@ -32,12 +49,12 @@
         <div class="theatre-movies">
             <div class="top">
                 <h3 class="mt-4">Populars OnDemand</h3>
-                <div class="view-all">View All</div>
+
             </div>
             <div class="movies-thumbnail">
                 <div class="movie" *ngFor="let movie of theatreMovies">
                     <div class=" cover">
-                        <img [src]="movie.cover" alt="">
+                        <img class="max" [src]="movie.cover" alt="">
                     </div>
                     <div class="details">
                         <div class="name mt-2">{{movie.name}}</div>
@@ -63,7 +80,7 @@
             <div class="movie mt-3 ms-3 pstxt" *ngFor="let movie of popularMovies">
 
                 <div class="details">
-                    <div class="name mt-2">{{movie.name}}</div>
+                    <div class="name mt-2 max2">{{movie.name}}</div>
                     <div class="rating">
                         <ng-template #t let-fill="fill">
                             <span class="star" [class.full]="fill===100">
