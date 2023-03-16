@@ -5,7 +5,7 @@
     <div class="movie-container">
         <div class="top">
             <div class="left">
-                <div class="name pt">{{movie?.name}}</div>
+                <div class="name pt">{{film?.name}}</div>
                 <div class="rating">
                     <div class="rating">
                         <ng-template #t let-fill="fill">
@@ -15,14 +15,14 @@
                             </span>
                         </ng-template>
 
-                        <ngb-rating [(rate)]="movie.rating" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+                        <ngb-rating [(rate)]="film.rating" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
                     </div>
                 </div>
                 <div class="year pf pt">
-                    {{movie.year}}
+                    {{film.year}}
                 </div>
                 <div class="cover">
-                    <img [src]="movie?.cover" alt="">
+                    <img [src]="film?.cover" alt="">
                 </div>
 
             </div>

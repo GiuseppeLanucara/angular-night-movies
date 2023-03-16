@@ -13,7 +13,7 @@ export class MovieComponent {
   id = '';
   url = '';
   movies: any;
-  movie: any;
+  film: any;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
@@ -33,9 +33,9 @@ export class MovieComponent {
   getMovie() {
     this.http.get(this.url).subscribe((movies) => {
       this.movies = movies;
-      let index = this.movies.findIndex((movie: { id: string }) => movie.id == this.id);
+      let index = this.movies.findIndex((film: { id: string }) => film.id == this.id);
       if (index > -1) {
-        this.movie = this.movies[index];
+        this.film = this.movies[index];
       }
     })
   }

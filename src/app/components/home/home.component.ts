@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import popularMoviesJSON from '../../../assets/data/popular-movies.json';
+
 
 @Component({
   selector: 'app-home',
@@ -12,8 +14,17 @@ export class HomeComponent implements OnInit {
   trendingMovies: any;
   theatreMovies: any;
   popularMovies: any;
+  films: any[] = popularMoviesJSON;
+  newFilm: any = {};
 
   constructor(private http: HttpClient, private router: Router) { }
+
+  addFilm() {
+    this.films.push(this.newFilm);
+    localStorage.setItem('films', JSON.stringify(this.films));
+    this.newFilm = {};
+
+  }
 
   ngOnInit(): void {
     this.getTrendingMovies();
@@ -47,6 +58,6 @@ export class HomeComponent implements OnInit {
 
 
   goToMovie(type: string, id: string) {
-    this.router.navigate(['movie', type, id]);
+    this.router.navigate(['film', type, id]);
   }
 }
